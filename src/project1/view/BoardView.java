@@ -18,17 +18,11 @@ public class BoardView {
     public void boardWrite(User user){
         System.out.println("게시글을 입력하세요.");
         String content = sc.nextLine();
-        Board board = new Board(content, user.getName());
-        boardController.boardWrite(board);
+        boardController.boardWrite(content,user);
     }
 
     public void boardRead(User user){
-        for (Board board : boardController.boardDao.boards){
-            if (user.getName().equals(board.getWriter())){
-                System.out.println(board);
-            }
-        }
-
-
+        System.out.println("게시글 출력");
+        boardController.boardRead(user);
     }
 }

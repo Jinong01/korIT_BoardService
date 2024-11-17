@@ -6,7 +6,6 @@ import project1.model.dto.User;
 public class UserController {
 
     public UserDao userDao = UserDao.getInstance();
-
     public boolean check(){
         return !userDao.users.isEmpty();
     }
@@ -34,6 +33,5 @@ public class UserController {
             }
         }
         return null;
-
     }
 }

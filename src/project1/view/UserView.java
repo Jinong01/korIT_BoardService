@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class UserView {
     public Scanner sc = new Scanner(System.in);
-
     public UserController userController = new UserController();
+
     public void signUp (){
         while (true) {
             System.out.println("ID:");
